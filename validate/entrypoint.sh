@@ -3,6 +3,7 @@ set -e
 cd "${TF_ACTION_WORKING_DIR:-.}"
 
 WORKSPACE=${TF_ACTION_WORKSPACE:-default}
+terraform workspace new "$WORKSPACE"
 terraform workspace select "$WORKSPACE"
 
 set +e
